@@ -4,11 +4,41 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    const n1 = parseInt(prompt("Informe um numero"))
+    const n2 = parseInt(prompt("Informe um numero"))
+    const n3 = parseInt(prompt("Informe um numero"))
+    let ordem
 
     //PROCESSAMENTO
-
+    if(n1>n2){
+        if(n2>n3){
+            ordem = [n1, n2, n3]
+        }
+        if(n3>n2){
+            ordem = [n1, n3, n2]
+        }
+    }
+    else if(n2>n1){
+        if(n3>n1){
+            ordem = [n2, n3, n1]
+        }
+        if(n1>n3){
+            ordem = [n2, n1, n3]
+        }
+    }
+    else if(n3>n1){
+        if(n2>n1){
+            ordem = [n3, n2, n1]
+        }
+        if(n1>n2){
+            ordem = [n3, n1, n2]
+        }
+    }
+    else{
+        ordem = [n1, n2, n3]
+    }
+    
 
     //SAÍDA
-
+    document.write(`${ordem.join(" - ")}`)
 </script>
