@@ -10,11 +10,17 @@
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
     //ENTRADA
-
+    const corUsuario = prompt("Escolha uma cor:Azul, amarelo, verde, branco, preto, marrom, cinza").toLowerCase()
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
 
     //PROCESSAMENTO
-
-
+    const localCor = nomeCores.indexOf(corUsuario)
+    const numero = Math.floor(Math.random() * 7);
+    if (localCor === numero){
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corUsuario}`)
+    } else {
+        alert("NÃO FOI DESSA VEZ... TENTE NOVAMENTE!")
+    }
     //SAÍDA
 
 
